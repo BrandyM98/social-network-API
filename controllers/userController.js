@@ -27,17 +27,6 @@ module.exports = {
         return res.status(500).json(err);
       });
   },
-  // Delete a user
-  deleteUser(req, res) {
-    User.findOneAndDelete({ _id: req.params.userId })
-      .then((user) =>
-        !user
-          ? res.status(404).json({ message: "No User with that ID!" })
-          : Thought.deleteMany({ _id: { $in: user.thoughts } })
-      )
-      .then(() => res.json({ message: "User and Thought deleted!" }))
-      .catch((err) => res.status(500).json(err));
-  },
   // Update a user
   updateUser(req, res) {
     User.findOneAndUpdate(
@@ -50,6 +39,17 @@ module.exports = {
           ? res.status(404).json({ message: "No User with this ID!" })
           : res.json(user)
       )
+      .catch((err) => res.status(500).json(err));
+  },
+  // Delete a user
+  deleteUser(req, res) {
+    User.findOneAndDelete({ _id: req.params.userId })
+      .then((user) =>
+        !user
+          ? res.status(404).json({ message: "No User with that ID!" })
+          : Thought.deleteMany({ _id: { $in: user.thoughts } })
+      )
+      .then(() => res.json({ message: "User and Thought deleted!" }))
       .catch((err) => res.status(500).json(err));
   },
 
