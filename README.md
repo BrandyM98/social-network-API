@@ -9,8 +9,6 @@
 ## Description
 This application is a Social network where users can share their thoughts, react to friends, and create a friend's list.  Express.js was used for routing, MongoDB was the database, the Mongoose ODM, and Insomnia Core for demonstration.
 
-[GitHub Repo](https://github.com/BrandyM98/social-network-API)
-
 ## Usage
 To use this application, first clone the project and navigate to VS Code. In the command-line, install the following packages:
 - npm i mongoose
