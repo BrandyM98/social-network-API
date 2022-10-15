@@ -19,8 +19,7 @@ To use this application, first clone the project and navigate to VS Code. In the
 To start the application, type 'nodemon server.js' in the command-line.
 
 ## Visuals
-Here is a visual of the walkthrough video.
 
-![Alt text](./assets/Untitled_%20Oct%2014%2C%202022%207_53%20PM.webm)
+![Alt text](./assets/Desktop-screenshot.jpeg)
 
 [Click this link to access the walkthrough video](https://watch.screencastify.com/v/4uImSlHhb3lrwAQBOXqd) 
